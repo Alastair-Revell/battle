@@ -8,9 +8,17 @@ feature 'Enter names' do
   end
 end
 
-feature "Viewing PLayer2's hitpoints" do
+feature "Viewing Player2's hitpoints" do
   scenario 'view hp' do
     sign_in_and_play
     expect(page).to have_content "Mittens's HP 2"
   end
+end
+
+feature "Attacking Player 2" do
+  scenario "attack player 2 " do
+    sign_in_and_play
+    #unknown method
+    expect(page.boxed).to have_content "Player 1 attacked Player 2 ... dmg"
+
 end
